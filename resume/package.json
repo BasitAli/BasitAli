@@ -1,0 +1,19 @@
+{
+  "name": "basit-ali-resume",
+  "scripts": {
+    "build": "nuxt generate",
+    "generate": "nuxt ",
+    "dev": "nuxt",
+    "start": "nuxt"
+  },
+  "devDependencies": {
+    "@mdi/svg": "^5.6.55",
+    "@nuxtjs/svg": "^0.1.12",
+    "cheerio": "^1.0.0-rc.3",
+    "eslint": "^7.9.0",
+    "js-yaml-loader": "^1.2.2",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.6",
+    "sass-loader": "^10.0.2"
+  }
+}
