@@ -114,7 +114,7 @@
 </template>
 
 <script>
-import resume from "../../config/data.yml";
+import resume from "../config/data.yml";
 import Linkedin from "@mdi/svg/svg/linkedin.svg?inline";
 import Twitter from "@mdi/svg/svg/twitter.svg?inline";
 import Github from "@mdi/svg/svg/github.svg?inline";
@@ -138,6 +138,9 @@ export default {
 
 <style scoped lang="scss">
 .page {
+  background: #191a1b;
+  color: white;
+
   width: 800px;
   margin: 40px auto 60px;
 
