@@ -1,5 +1,8 @@
 import cheerio from "cheerio";
 export default {
+  server: {
+    host: '0'
+  },
   target: "static",
   render: { resourceHints: false },
   css: ["~/css/main.css"],

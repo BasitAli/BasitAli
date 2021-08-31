@@ -1,4 +1,4 @@
 node_modules
 dist
 .nuxt
-.DS_Store
+*.DS_Store
