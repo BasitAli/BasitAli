@@ -1,141 +1,85 @@
-name: Basit Ali Mundia
-title: Solution Architect
-about:
-  An innovative & enthusiastic Developer / Architect, proficient in creating
-  cross platform apps & experiences. Vast technical expertise combined
-  with strong imaginative skills enables me to ideate better features, solve
-  more problems, give higher attention to details, and design products
-  that deliver an exceptional experience. Involved in the entire design
-  process, from visualizing product features, determining the target
-  audience, visualizing UX flows, creating wireframes, and finally
-  designing the UI.
-summary:
-  working_since: 2010
-  current_company: Ithaka
-  current_role: Senior Frontend Engineer (Contractor)
-  current_city: Karachi, Pakistan
+name: Dr Naseem Amin Dhedhi
+title: FCPS in Family Medicine, MRCGP (Int), MBBS
 contact:
-  email: basitali@mundia.dev
-  phone: "+92 333 2470645"
-  website: https://mundia.dev
-social:
-  linkedin: BasitAli
-  twitter: BasitAliMundia
-  github: BasitAli
-skills:
-  - name: Frontend Development
-    description: Responsive SPAs and PWAs using Vue, React, Angular or Vanilla JS with latest Javascript/ECMAScript versions and/or Typescript
-  - name: Service Development
-    description: Express/Node, Flask/FastAPI, Serverless/Chalice/Lambdas, Django
-  - name: Mobile App Development
-    description: React-Native, Java/Kotlin, ObjectiveC/Swift
-  - name: DevOps
-    description: Docker, Amazon Web Services, Jenkins
-employments:
-  - title: Senior Frontend Engineer (Contractor)
-    company: Ithaka
-    from: 01/2018
-    achievements:
-      - Rewrite existing frontend in Vue.js while setting up a base for new features
-      - Mentoring and Onboarding team members
-      - Setting up CI pipelines in Jenkins running on Kubernetes
-      - Setup AWS Lambda based services for saving UI state for a user
-  - title: Full Stack Engineer (Contractor)
-    company: Artstor
-    from: 01/2014
-    to: 12/2017
-    achievements:
-      - Lead backend development for Python/Pyramid backed service
-      - Setup new frontend application in AngularJS
-      - Maintain existing frontend application in ExtJS 3.2
-      - Manage the ElasticSearch cluster for the application
-  - title: Frontend Engineer (Contractor)
-    company: Artstor
-    from: 01/2013
-    to: 12/2013
-    achievements:
-      - Lead a team of 2 to rewrite an ExtJS 4 application in AngularJS.
-      - Setup the git workflow and CI pipeline for the application.
-  - title: Frontend / Mobile Application (Contractor)
-    company: Artstor
-    from: 01/2012
-    to: 12/2012
-    achievements:
-      - Maintain an existing web application tailored for mobile phones.
-      - Spearhead development on Native Android version of the application.
-  - title: Mobile Application Developer
-    company: Active Capital IT
-    from: 08/2010
-    to: 12/2011
-    achievements:
-      - Hired to work on in-house projects with a designer in the team
-      - Developed several low key educational apps for the iPad
-      - One of the app was a 1-to-1 clone of the iPad Photo app for a preset selection of Photos including detailed multi-touch gestures and animations.
-  - title: Mobile Application Developer
-    company: 1 Social Media
-    from: 01/2010
-    to: 07/2010
-    achievements:
-      - Work with a designer and other developers to work on short term mobile application projects.
-      - Develop PHP services on CakePHP / Wordpress as needed.
-      - Prepare reusable boilerplate codes for certain aspects of app development.
+  email: naseemdhedhi@hotmail.com
+  phone: "+92 333 6866744"
+  address: Flat T2, Third Floor, Plot C10, Dadabhoy Town, Karachi
+summary:
+  - Consultant Physician, Bismillah Hospital and Royal Institute of Medicine and Surgery, Karachi
+  - FCPS training from The Indus Hospital, Karachi
 education:
-  - degree: Master's Degree
-    program: Computer Science and Information Technology
-    institution: NED University of Engineering and Technology
+  - degree: FCPS in Family Medicine
+    date: December 2020
+  - degree: MRCGP (Int)
+    date: March 2020
+  - degree: Bachelor of Medicine and Bachelor of Surgery (MBBS)
+    institution: Dow Medical College, Karachi
     date: 2012
-    location: Karachi, Pakistan
-  - degree: Bachelor's Degree
-    program: Computer Engineering
-    institution: Sir Syed University of Engineering and Technology
-    date: 2010
-    location: Karachi, Pakistan
-highlights:
-  - name: ItsPlenty Mobile Applications
-    website: https://www.itsplenty.com/itsplentyapp
-    description: Plen­ty is a unique and in­no­v­a­tive recipe cre­ation so­cial me­dia plat­form de­signed to pro­vide home cooks, food in­flu­encers, and pro­fes­sion­al with an easy-to-use space to share their pas­sion and cre­ativ­i­ty for food.
-    stack:
-      - group: Backend
-        tech:
-          - Python Django
-          - PostgreSQL
-          - Elasticsearch
-      - group: Mobile App
-        tech:
-          - React Native
-          - Firebase
-    highlights:
-      - Taking on the role of an Architect for the project, lead a team of a Django developer and a couple of React Native developers on our way to develop the next-gen recipe creation and sharing app.
-      - Opted Firebase for in-app Chat
-      - The application stack was deployed on IBM Cloud with a managed database and custom configured VPS instances
-  - name: JSTOR Forum Lead
-    website: https://www.jstor.org/librarians/products/jstor-forum/
-    description: JSTOR Forum is a user-friendly solution that allows you to manage, describe, and distribute your institution’s collections and projects to increase discoverability and use.
-    highlights:
-      - Lead an in-house team of 3 developers when we took the reigns of the project
-      - Backend services were powered using Python (Pyramid). Frontend was using ExtJS 3.2
-      - Elasticsearch was used to provide full-text search and filter ability
-      - Created docker based development environment for new team members
-      - Setup behave / gherkin based api tests that ran on a Bitbucket pull requests
-  - name: JSTOR Forum UI Rewrite
-    description: The current Forum UI in ExtJS was outdated and was affecting our ability to push new features on schedule.
-    highlights:
-      - A new team was formed comprising of 4 UI developers (me included), a QA resource and a UX designer to come up with a plan to refresh the UI while keeping all the existing features to reduce the learning curve for our users.
-      - Angular 2 and Vue were the two candidates for the re-implementation, where Vue won with a clear margin.
-      - Vue really amped up our time to completion and gave us room to get some additional features in.
-  - name: JSTOR Work Form
-    description: The Work form consists of more than 200 fields and four tabs. You can catalog as much or as little as you know or need, and the work will still be very useful.
-    date: 2014 - 2015
-    highlights:
-      - The existing work form, built on ExtJS 4.x, had serious performance issues causing the application to take somewhere around 2 to 5 minutes to load.
-      - Evaluated Angular and Backbone for the rewrite and opted for Angular.
-      - Known issues from the existing version helped us avoid the same mistakes again.
-      - Lead the effort with two more frontend developers onboard.
-faq:
-  - question: Frontend or Backend / Preferred set of skills?
-    response: Since the beginning of my journey in the IT industry, Iʼve had a clear and focused goal - to learn as much as I can, keep pushing myself, and make things that I can take pride in. Which is why I donʼt limit myself as a programmer having a specified skillset. Iʼve learnt everything I know on the job, under immense work pressures, and am continuing to do so. From design to front-end coding, mobile applications and recently back-end distributed servers. Where people normally see challenges, I see opportunities.
-  - question: Where do I see myself after a few years?
-    response:
-      I have the desire, the ambition, the right work ethic & the talent to be good in what I do.
-      In a few years, ideally, I would love to be working on a startup of my own and try to change the world, one step at a time.
-      If not, my desire is to work on a great product and adding value with my creative and technical knowledge.
+  - degree: Intermediate (Premedical)
+    institution: St. Jospeh’s College of Women
+    date: 2006
+  - degree: O – levels (Cambridge Board)
+    date: 2004
+experience:
+  - title: Consultant Family Physician
+    company: Royal Institute of Medicine and Surgery, Al Khaleej towers, Bahadurabad
+    from: August 2020
+    to: Current
+  - title: Consultant Physician
+    company: Bismillah Hospital, Baloch Colony
+    from: Feb 2021
+    to: Current
+  - title: Consultant Physician
+    company: Bakht Bhari Chiniot Hospital, Azam Town
+    from: Oct 2020
+    to: Jan 2021
+  - title: FCPS training in Family Medicine
+    company: The Indus Hospital, Karachi
+    from: Jan 2016
+    to: April 2020
+  - title: Lecturer (Pathology Department) and Module Coordinator (Semester IV, MBBS)
+    company: Dow Medical College, Karachi
+    from: 14th Jan 2015
+    to: Dec 2015
+  - title: RMO
+    company: Zainab Punjwani Memorial Hospital, Karachi
+    from: 1st Sep 2014
+    to: 7th Nov 2014
+  - title: Internship in “General Medicine” and “Psychiatry” department
+    company: Civil Hospital, Karachi.
+    from: 1st Nov 2012
+    to: 30th April 2013
+  - title: Internship in “General Surgery” and “Gynecology” department
+    company: Civil Hospital, Karachi
+    from: 1st May 2012
+    to: 31st October 2012
+  - title: Electives in department of “Family Medicine”
+    company: Aga Khan University Hospital, Karachi
+    from: 1st April 2012
+    to: 30th April 2012
+  - title: Electives in department of Endocrinology
+    company: Liaquat National Hospital
+    from: 1st Dec
+    to: 31st Dec 2009
+  - title: Electives at “Burns Center”
+    company: DUHS, Karachi.
+    from: 13th Nov 2008
+    to: 3rd Dec 2008
+research:
+  summary: Two articles published in Journal of Family Medicine and Primary Care
+  list:
+    - name: Knowledge of standard precautions among healthcare professionals at a Tertiary care hospital in Karachi.
+      doi: 10.4103/jfmpc.jfmpc_1622_20
+      image: qrcode-knowledge-precautions.png
+    - name: Self medication of antimicrobials among people visiting outpatient clinics of a Tertiary care hospital, Karachi.
+      doi: 10.4103/jfmpc.jfmpc_1887_20
+      image: qrcode-self-medication.png
+accreditations:
+  - title: Focus emergency ultrasound (Two day Med global course)
+    date: November 2019
+  - title: Basic life support training
+    date: 2019
+  - title: Neurolinguistic programming (NLP) 2 day certificate course
+    date: July 2019
+  - title: 3 months working experience in Punjab rural settings (Gurmani and Muzaffargarh)
+    date: 1st Aug – 30th Oct 2018

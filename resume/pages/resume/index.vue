@@ -1,10 +1,11 @@
 <template>
   <div class="page">
     <div class="head">
+      <img class="profile" src="~/assets/profile.png" />
       <div class="info">
         <h1>{{ resume.name }}</h1>
         <h2>{{ resume.title }}</h2>
-        <div>
+        <div class="contact">
           <div>
             <strong>Email:</strong>
             <span>{{ resume.contact.email }}</span>
@@ -13,102 +14,82 @@
             <strong>Phone:</strong>
             <span>{{ resume.contact.phone }}</span>
           </div>
+          <div>
+            <strong>Address:</strong>
+            <span>{{ resume.contact.address }}</span>
+          </div>
         </div>
       </div>
-      <ul class="social">
+      <ul v-if="resume.social" class="social">
         <li><linkedin /> linkedin.com/in/{{ resume.social.linkedin }}</li>
         <li><github />github.com/{{ resume.social.github }}</li>
         <li><twitter /> @{{ resume.social.twitter }}</li>
         <!-- <li><web />{{ resume.contact.website }}</li> -->
       </ul>
     </div>
-    <section class="about">{{ resume.about }}</section>
+    <div v-if="resume.about" class="about">{{ resume.about }}</div>
     <section>
-      <dl class="summary">
-        <dt>Working since</dt>
-        <dd>{{ resume.summary.working_since }}</dd>
-        <dt>Current City</dt>
-        <dd>{{ resume.summary.current_city }}</dd>
-        <dt>Company</dt>
-        <dd>{{ resume.summary.current_company }}</dd>
-        <dt>Role</dt>
-        <dd>{{ resume.summary.current_role }}</dd>
-      </dl>
-    </section>
-    <section>
-      <h1>Skills</h1>
-      <dl class="table">
-        <template v-for="(skill, idx) in resume.skills">
-          <dt :key="idx">{{ skill.name }}</dt>
-          <dd :key="idx">{{ skill.description }}</dd>
-        </template>
-      </dl>
-    </section>
-    <section>
-      <h1>Employment History</h1>
-      <div
-        v-for="(employment, idx) in resume.employments"
-        :key="idx"
-        class="employment section-item"
-      >
-        <h2>{{ employment.title }} @ {{ employment.company }}</h2>
-        <div>{{ employment.from }} - {{ employment.to || "Present" }}</div>
-        <template v-if="employment.achievements">
-          <!-- <h3>Tasks / Achievements</h3> -->
-          <ul>
-            <li
-              v-for="achievement in employment.achievements"
-              :key="achievement"
-            >
-              {{ achievement }}
-            </li>
-          </ul>
-        </template>
-      </div>
+      <h1>Summary</h1>
+      <ul>
+        <li v-for="summary in resume.summary" :key="summary">
+          {{ summary }}
+        </li>
+      </ul>
     </section>
     <section class="education">
       <h1>Education</h1>
-      <ol>
+      <ul>
         <li
           v-for="(education, idx) in resume.education"
           :key="idx"
           class="section-item"
         >
-          <h2>{{ education.degree }}, {{ education.program }}</h2>
+          <h2>{{ education.degree }}</h2>
           <h3>{{ education.institution }}</h3>
           <div>{{ education.date }}</div>
         </li>
-      </ol>
+      </ul>
     </section>
     <section>
-      <h1>Work Highlights</h1>
-      <div
-        v-for="(highlight, idx) in resume.highlights"
-        :key="idx"
-        class="highlight section-item"
-      >
-        <h2>{{ highlight.name }}</h2>
-        <a href="">{{ highlight.website }}</a>
-        <p>{{ highlight.description }}</p>
-        <dl v-if="highlight.stack" class="tech-stack table">
-          <template v-for="stack in highlight.stack">
-            <dt :key="stack.group">
-              {{ stack.group }}
-            </dt>
-            <dd :key="stack.group">
-              {{ stack.tech.join(", ") }}
-            </dd>
-          </template>
-        </dl>
-        <template v-if="highlight.highlights">
-          <h3>Highlights:</h3>
-          <ul>
-            <li v-for="item in highlight.highlights" :key="item">
-              {{ item }}
-            </li>
-          </ul>
-        </template>
-      </div>
+      <h1>Work Experience</h1>
+      <ul>
+        <li
+          v-for="(experience, idx) in resume.experience"
+          :key="idx"
+          class="experience section-item"
+        >
+          <h2>{{ experience.title }} at {{ experience.company }}</h2>
+          <div>{{ experience.from }} - {{ experience.to || "Present" }}</div>
+        </li>
+      </ul>
+    </section>
+    <section class="research">
+      <h1>Research Experience</h1>
+      <p class="summary">{{ resume.research.summary }}</p>
+      <ul>
+        <li v-for="(research, idx) in resume.research.list" :key="idx">
+          <div class="research-item">
+            <div class="content">
+              <h2>{{ research.name }}</h2>
+              <strong>DOI:</strong> {{ research.doi }}
+            </div>
+            <img class="qr-code" :src="require(`~/assets/${research.image}`)" />
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="accreditations">
+      <h1>Accreditations</h1>
+      <ul>
+        <li
+          v-for="(accreditations, idx) in resume.accreditations"
+          :key="idx"
+          class="section-item"
+        >
+          <h2>{{ accreditations.title }}</h2>
+          <h3>{{ accreditations.date }}</h3>
+        </li>
+      </ul>
     </section>
   </div>
 </template>
@@ -122,7 +103,7 @@ import Web from "@mdi/svg/svg/web.svg?inline";
 
 export default {
   head: {
-    title: "Resume | Basit Ali",
+    title: "Resume | Dr Naseem Amin Dhedhi",
   },
   components: {
     Linkedin,
@@ -147,25 +128,42 @@ export default {
 }
 
 h1 {
-  margin: 1rem 0;
-  font-size: 2rem;
-  font-weight: bold;
+  margin: 1.5rem 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
+  font-weight: 400;
 }
 
 .head {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
+
+  .profile {
+    align-self: stretch;
+    height: 110px;
+    width: auto;
+    margin-right: 1rem;
+  }
+
+  .contact {
+    margin-top: 0.25rem;
+  }
+
+  strong {
+    font-weight: 400;
+  }
 
   .info {
     flex: 1;
@@ -205,7 +203,7 @@ dl.summary {
 
   dt {
     grid-row-start: 1;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   dd {
@@ -224,7 +222,7 @@ dl.table {
   }
 
   dt {
-    font-weight: 600;
+    font-weight: 400;
     grid-column-start: 1;
   }
   dd {
@@ -233,10 +231,10 @@ dl.table {
 }
 
 .section-item {
-  border-left: 10px solid #ccc;
+  // border-left: 10px solid #ccc;
   margin-bottom: 1rem;
-  margin-left: 0.25rem;
-  padding-left: 1rem;
+  // margin-left: 0.25rem;
+  // padding-left: 1rem;
   page-break-inside: avoid;
   // page-break-before: always;
 
@@ -246,6 +244,7 @@ dl.table {
     }
 
     p {
+      margin-top: 0.5rem;
       margin-bottom: 1rem;
     }
 
@@ -254,15 +253,27 @@ dl.table {
       color: black;
     }
   }
+
+  &.experience {
+    ul {
+      margin-top: 0.5rem;
+    }
+  }
 }
 
 ul {
   list-style-type: square;
   list-style-position: outside;
   padding-left: 1rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
 }
 
-.employment {
+li {
+  margin-top: 0.25rem;
+}
+
+.experience {
   h2 {
     margin-bottom: 0;
   }
@@ -272,7 +283,7 @@ ul {
   }
 }
 
-.education {
+section {
   h2 {
     margin-bottom: 0;
   }
@@ -280,13 +291,25 @@ ul {
   ol {
     list-style-type: none;
   }
-
-  //   h3 {
-  //     margin-top: 0.5rem;
-  //   }
 }
 
-section.about {
-  margin: 1rem 0;
+div.about {
+  margin: 1rem 0 1.5rem;
+}
+
+.research {
+  .summary {
+    margin-bottom: 1rem;
+  }
+
+  .research-item {
+    display: flex;
+    flex-direction: row;
+
+    .qr-code {
+      width: 80px;
+      height: auto;
+    }
+  }
 }
 </style>

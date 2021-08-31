@@ -1,5 +1,8 @@
 import cheerio from "cheerio";
 export default {
+  server: {
+    host: "0"
+  },
   target: "static",
   render: { resourceHints: false },
   css: ["~/css/main.css"],
@@ -8,7 +11,7 @@ export default {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+          "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       }
     ]
   },
