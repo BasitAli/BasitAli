@@ -5,10 +5,12 @@ contact:
   phone: "+92 333 6866744"
   address: Flat T2, Third Floor, Plot C10, Dadabhoy Town, Karachi
 summary:
+  - Senior Registrar - Department of Family Medicine, Baqai University Hospital, Karachi
   - Consultant Physician, Bismillah Hospital and Royal Institute of Medicine and Surgery, Karachi
   - FCPS training from The Indus Hospital, Karachi
 education:
   - degree: FCPS in Family Medicine
+    institution: The Indus Hospital, Karachi
     date: December 2020
   - degree: MRCGP (Int)
     date: March 2020
@@ -21,6 +23,10 @@ education:
   - degree: O – levels (Cambridge Board)
     date: 2004
 experience:
+  - title: Senior Registrar
+    company: Department of Family Medicine, Baqai University Hospital, Karachi
+    from: 3rd August 2021
+    to: Current
   - title: Consultant Family Physician
     company: Royal Institute of Medicine and Surgery, Al Khaleej towers, Bahadurabad
     from: August 2020
